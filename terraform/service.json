@@ -1,0 +1,55 @@
+[
+  {
+    "name": "app",
+    "image": "jmdiouf/openlxp-xia-dau:latest",
+    "cpu": 2,
+    "memory": 512,
+    "essential": true,
+    "portMappings": [
+      {
+        "containerPort": 8000,
+        "hostPort": 8000,
+        "protocol": "tcp"
+      }
+    ],
+    "environmentVariables": [
+      {
+        "DB_NAME": "arn:aws:ssm:us-east-1:##########:parameter/MYSQL_DATABASE",
+        "DB_PASSWORD": "arn:aws:ssm:us-east-1:##########:parameter/MYSQL_PASSWORD",
+        "DB_USER": "arn:aws:ssm:us-east-1:##########:parameter/MYSQL_USER",
+        "DJANGO_SUPERUSER_PASSWORD": "arn:aws:ssm:us-east-1:##########:parameter/DJANGO_SUPERUSER_PASSWORD",
+        "DJANGO_SUPERUSER_USERNAME": "arn:aws:ssm:us-east-1:##########:parameter/DJANGO_SUPERUSER_USERNAME"
+      }
+    ],
+    "entryPoint": [
+      "sh",
+      "-c"
+    ],
+    "command": [
+      "\"/opt/app/start-server.sh\""
+    ]
+  },
+  {
+    "name": "db",
+    "image": "mysql:5.7",
+    "cpu": 2,
+    "memory": 512,
+    "essential": true,
+    "portMappings": [
+      {
+        "containerPort": 3306,
+        "hostPort": 3306,
+        "protocol": "tcp"
+      }
+    ],
+    "environmentVariables": [
+      {
+        "MYSQL_DATABASE": "arn:aws:ssm:us-east-1:##########:parameter/MYSQL_DATABASE",
+        "MYSQL_PASSWORD": "arn:aws:ssm:us-east-1:##########:parameter/MYSQL_PASSWORD",
+        "MYSQL_ROOT_PASSWORD": "arn:aws:ssm:us-east-1:##########:parameter/MYSQL_ROOT_PASSWORD",
+        "MYSQL_USER": "arn:aws:ssm:us-east-1:##########:parameter/MYSQL_USER"
+      }
+    ]
+  }
+]
+
