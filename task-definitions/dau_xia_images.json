@@ -1,6 +1,6 @@
 [
    {
-      "name":"xia-app",
+      "name":"xia-dau-app",
       "image":"jmdiouf/openlxp-xia-dau:latest",
       "cpu":2,
       "memory":512,
