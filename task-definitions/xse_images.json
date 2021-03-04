@@ -1,0 +1,17 @@
+[
+  {
+    "name": "elk",
+    "image": "elasticsearch:latest",
+    "cpu": 2,
+    "memory": 512,
+    "essential": true,
+    "portMappings": [
+      {
+        "containerPort": 9200,
+        "hostPort": 9200,
+        "protocol": "tcp"
+      }
+    ]
+  }
+]
+
