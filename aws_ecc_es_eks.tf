@@ -26,7 +26,7 @@ resource "aws_iam_role_policy_attachment" "xxse_eks_cluster_iam_role_service-Ama
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSServicePolicy"
   role       = aws_iam_role.xse_eks_cluster_iam_role_service.name
 }
-#
+
 resource "aws_eks_cluster" "xse_eks_cluster_iam_role_service" {
   name     = "xse_eks_cluster"
   role_arn = aws_iam_role.xse_eks_cluster_iam_role_service.arn
