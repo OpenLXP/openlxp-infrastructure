@@ -1,7 +1,7 @@
 # creates the XIA task definition. container definition is defined in the *.json file
 resource "aws_ecs_task_definition" "xia_dau_task_definition" {
   family                = "xia_dau_task_definition"
-  container_definitions = file("task-definitions/dau_xia_images.json")
+  container_definitions = file("task-definitions/xia_dau_images.json")
   network_mode          = "awsvpc"
   execution_role_arn    = "arn:aws:iam::aws account:role/ecsTaskExecutionRole"
 

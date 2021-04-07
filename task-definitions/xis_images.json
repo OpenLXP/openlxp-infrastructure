@@ -1,7 +1,7 @@
 [
    {
       "name":"xis-app",
-      "image":"jmdiouf/openlxp-xia-dau:latest",
+      "image":"openlxp/openlxp-xis:latest",
       "cpu":2,
       "memory":512,
       "essential":true,
