@@ -1,5 +1,5 @@
 # Create subnet # 1 in us-east-1
-resource "aws_subnet" "xse_subnet_useast1" {
+resource "aws_subnet" "xse_subnet1_useast1" {
   provider          = aws
   availability_zone = element(data.aws_availability_zones.management-azs.names, 0)
   vpc_id            = aws_vpc.vpc_management.id
