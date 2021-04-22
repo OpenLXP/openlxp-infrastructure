@@ -23,3 +23,17 @@ variable "fargate_memory" {
   default     = "2048"
 }
 
+
+
+
+
+
+
+variable "eks_cluster_name" {
+  default = "default_value"
+}
+
+
+
+
+
