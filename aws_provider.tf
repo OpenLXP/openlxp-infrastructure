@@ -13,11 +13,3 @@ provider "aws" {
   region  = var.region-management
   alias   = "ecc-management-region"
 }
-
-
-#provider "aws" {
-#  profile = var.profile
-#  region  = var.region-production
-#  alias   = "ecc-production-region"
-#}
-

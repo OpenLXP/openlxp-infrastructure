@@ -3,7 +3,7 @@ resource "aws_ecs_task_definition" "xis_task_definition" {
   family                = "xis_task_definition"
   container_definitions = file("task-definitions/xis_images.json")
   network_mode          = "awsvpc"
-  execution_role_arn    = "arn:aws:iam::aws account:role/ecsTaskExecutionRole"
+  execution_role_arn    = "arn:aws:iam::var.aws_account:role/ecsTaskExecutionRole"
 
   volume {
     name      = "service-storage"
@@ -15,4 +15,3 @@ resource "aws_ecs_task_definition" "xis_task_definition" {
     expression = "attribute:ecs.availability-zone in [us-east-1a, us-east-1b]"
   }
 }
-
