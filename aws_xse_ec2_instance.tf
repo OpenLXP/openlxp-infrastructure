@@ -24,11 +24,6 @@ resource "aws_instance" "ecc_elasticsearch" {
   }
 }
 
-resource "aws_eip" xse_eip" {
-  vpc      = true
-  instance = aws_instance.ecc-elasticsearch.id
-}
-
 resource "aws_key_pair" "ecc_elastic_kp" {
   key_name = "ecc_elastic_kp"
   public_key = file("key.pub")

@@ -1,6 +1,6 @@
 # security group to allow inbound connection on port 8000 from VPC cidr. 443&80 from anywhere
-resource "aws_security_group" "ecs_xia_sg" {
-  name        = "ecs_xia_ecs_sg"
+resource "aws_security_group" "ecs_xse_sg" {
+  name        = "ecs_xse_sg"
   description = "Allow TLS inbound traffic on ports 8000,8010,8020,80,443"
   vpc_id      = aws_vpc.vpc_management.id
 
@@ -49,8 +49,8 @@ resource "aws_security_group" "ecs_xia_sg" {
 }
 
 # security group to allow inbound on port 3306
-resource "aws_security_group" "ecs_xia_mysql_sg" {
-  name        = "ecs_xia_mysql_sg"
+resource "aws_security_group" "ecs_xse_mysql_sg" {
+  name        = "ecs_xse_mysql_sg"
   description = "Allow MySQL connectivity"
   vpc_id      = aws_vpc.ecc_vpc.id
 
