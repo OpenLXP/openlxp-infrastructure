@@ -2,7 +2,7 @@
 resource "aws_security_group" "ecs_xse_sg" {
   name        = "ecs_xse_sg"
   description = "Allow TLS inbound traffic on ports 8000,8010,8020,80,443"
-  vpc_id      = aws_vpc.vpc_management.id
+  vpc_id      = aws_vpc.ecc_vpc.id
 
   ingress {
     description = "TLS from VPC"

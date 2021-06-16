@@ -1,6 +1,6 @@
 resource "aws_instance" "ecc_elasticsearch" {
   key_name      = aws_key_pair.ecc_elastic_kp.key_name
-  ami           = "ami-03ba3948f6c37a4b0"
+  ami           = "ami-0747bdcabd34c712a"
   instance_type = "t2.medium"
 
   tags = {
@@ -8,7 +8,7 @@ resource "aws_instance" "ecc_elasticsearch" {
   }
 
   vpc_security_group_ids = [
-    aws_security_group.ubuntu.id
+    aws_security_group.ecs_xse_sg.id
   ]
 
   connection {
@@ -43,6 +43,6 @@ resource "aws_eip" "xse_eip" {
 }
 
 resource "aws_eip_association" "eip_assoc" {
-  instance_id   = aws_instance.ecc-elasticsearch.id
+  instance_id   = aws_instance.ecc_elasticsearch.id
   allocation_id = aws_eip.xse_eip.id
 }

@@ -17,7 +17,7 @@
            "DB_NAME":"arn:aws:ssm:us-east-1:var.aws_account:parameter/XIA_DB_NAME",
            "DB_PASSWORD":"arn:aws:ssm:us-east-1:var.aws_account:parameter/DB_PASSWORD",
            "DB_ROOT_PASSWORD": "arn:aws:ssm:us-east-1:var.aws_account:parameter/DB_ROOT_PASSWORD",
-           "DB_HOST": "arn:aws:ssm:us-east-1:var.aws_account:parameter/EDX_DB_HOST"
+           "DB_HOST": "arn:aws:ssm:us-east-1:var.aws_account:parameter/EDX_DB_HOST",
            "DB_USER":"arn:aws:ssm:us-east-1:var.aws_account:parameter/DB_USER",
            "DATA_FILE_NAME": "arn:aws:ssm:us-east-1:var.aws_account:parameter/DATA_FILE_NAME",
            "DJANGO_SUPERUSER_PASSWORD":"arn:aws:ssm:us-east-1:var.aws_account:parameter/DJANGO_SUPERUSER_PASSWORD",
