@@ -44,6 +44,6 @@ resource "aws_security_group" "ecc_ssh_sg" {
   }
 
   tags = {
-    Name = "allow_tls"
+    Name = "ecc_ssh_sg"
   }
 }

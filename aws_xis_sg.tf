@@ -36,7 +36,7 @@ resource "aws_security_group" "ecs_xis_sg" {
   }
 
   tags = {
-    Name = "allow_tls"
+    Name = "ecc_xis_sg"
   }
 }
 
@@ -62,6 +62,6 @@ resource "aws_security_group" "ecs_xis_mysql_sg" {
   }
 
   tags = {
-    Name = "allow_tls_tofrom_mysql"
+    Name = "ecc_xis_db_sg"
   }
 }

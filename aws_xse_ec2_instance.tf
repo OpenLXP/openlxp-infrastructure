@@ -2,6 +2,8 @@ resource "aws_instance" "ecc_elasticsearch" {
   key_name      = aws_key_pair.ecc_elastic_kp.key_name
   ami           = "ami-0747bdcabd34c712a"
   instance_type = "t2.medium"
+  associate_public_ip_address = true
+  subnet_id = aws_subnet.xse_subnet1_useast1.id
 
   tags = {
     Name = "ecc-elasticsearch"

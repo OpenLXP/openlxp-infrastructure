@@ -44,7 +44,7 @@ resource "aws_security_group" "ecs_xse_sg" {
   }
 
   tags = {
-    Name = "allow_tls"
+    Name = "ecc_xse_sg"
   }
 }
 
@@ -70,6 +70,6 @@ resource "aws_security_group" "ecs_xse_mysql_sg" {
   }
 
   tags = {
-    Name = "allow_tls_tofrom_mysql"
+    Name = "ecc_xse_db_sg"
   }
 }
