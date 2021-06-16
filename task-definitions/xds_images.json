@@ -14,11 +14,11 @@
       ],
       "environmentVariables":[
          {
-           "REACT_APP_CONFIGURATION_API"=http://54.160.23.156:8100/api/ui-configuration/,
-           "REACT_APP_ES_API"=http://54.160.23.156:8100/es-api/,
-           "REACT_APP_ES_MLT_API"=http://54.160.23.156:8100/es-api/more-like-this/,
-           "REACT_APP_BACKEND_HOST"=http://54.160.23.156:8100,
-           "REACT_APP_SPOTLIGHT_COURSES"=http://54.160.23.156:8100/api/spotlight-courses
+           "REACT_APP_CONFIGURATION_API":"arn:aws:ssm:us-east-1:var.aws_account:parameter/REACT_APP_CONFIGURATION_API",
+           "REACT_APP_ES_API":"arn:aws:ssm:us-east-1:var.aws_account:parameter/REACT_APP_ES_API",
+           "REACT_APP_ES_MLT_API":"arn:aws:ssm:us-east-1:var.aws_account:parameter/REACT_APP_ES_MLT_API",
+           "REACT_APP_BACKEND_HOST":"arn:aws:ssm:us-east-1:var.aws_account:parameter/REACT_APP_BACKEND_HOST",
+           "REACT_APP_SPOTLIGHT_COURSES":"arn:aws:ssm:us-east-1:var.aws_account:parameter/REACT_APP_SPOTLIGHT_COURSES"
          }
       ],
       "entryPoint":[
@@ -44,24 +44,21 @@
       ],
       "environmentVariables":[
          {
-           "DB_NAME"=django,
-           "DB_USER"=root,
-           "DB_PASSWORD"=password,
-           "DB_ROOT_PASSWORD"=password,
-           "DB_HOST"=db,
-           "DJANGO_SUPERUSER_USERNAME"=admin,
-           "DJANGO_SUPERUSER_PASSWORD"=sekret1,
-           "DJANGO_SUPERUSER_EMAIL"=admin@example.com,
-           "DATA_FILE_NAME"=CSV_DAU_Consolidated_dummy.csv,
-           "SCHEMA_FILE"=schema.json,
-           "BUCKET_NAME"=dauxsr,
-           "UPLOAD_BUCKET_NAME"=dauxia,
+           "DB_NAME":"arn:aws:ssm:us-east-1:var.aws_account:parameter/XDS_DB_NAME",
+           "DB_USER":"arn:aws:ssm:us-east-1:var.aws_account:parameter/DB_USER",
+           "DB_PASSWORD":"arn:aws:ssm:us-east-1:var.aws_account:parameter/DB_PASSWORD",
+           "DB_ROOT_PASSWORD":"arn:aws:ssm:us-east-1:var.aws_account:parameter/DB_ROOT_PASSWORD",
+           "DB_HOST":"arn:aws:ssm:us-east-1:var.aws_account:parameter/DB_HOST",
+           "DJANGO_SUPERUSER_USERNAME":"arn:aws:ssm:us-east-1:var.aws_account:parameter/DJANGO_SUPERUSER_USERNAME",
+           "DJANGO_SUPERUSER_PASSWORD":"arn:aws:ssm:us-east-1:var.aws_account:parameter/DJANGO_SUPERUSER_PASSWORD",
+           "DJANGO_SUPERUSER_EMAIL":"arn:aws:ssm:us-east-1:var.aws_account:parameter/DJANGO_SUPERUSER_EMAIL",
+           "BUCKET_NAME":"arn:aws:ssm:us-east-1:var.aws_account:parameter/BUCKET_NAME",
            "AWS_ACCESS_KEY_ID"=
            "AWS_SECRET_ACCESS_KEY"=
-           "AWS_DEFAULT_REGION"=us-east-2,
-           "SECRET_KEY_VAL"=I23v7ZvMNV-qzj9c5d3MbnZfdaasnsGz1zCl7oP6PBk,
-           "ES_HOST"=3.208.136.89:9200,
-           "ES_INDEX"=metadata_v2-1,
+           "AWS_DEFAULT_REGION":"arn:aws:ssm:us-east-1:var.aws_account:parameter/AWS_DEFAULT_REGION",
+           "SECRET_KEY_VAL":"arn:aws:ssm:us-east-1:var.aws_account:parameter/SECRET_KEY_VAL",
+           "ES_HOST":"arn:aws:ssm:us-east-1:var.aws_account:parameter/ES_HOST",
+           "ES_INDEX":"arn:aws:ssm:us-east-1:var.aws_account:parameter/ES_INDEX",
          }
       ],
       "entryPoint":[

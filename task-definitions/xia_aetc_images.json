@@ -38,7 +38,7 @@
       ]
    },
    {
-      "name":"xia-db",
+      "name":"db_xia_aetc",
       "image":"mysql:5.7",
       "cpu":2,
       "memory":512,

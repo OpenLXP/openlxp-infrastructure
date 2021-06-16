@@ -1,7 +1,7 @@
 [
    {
-      "name":"xds-ui",
-      "image":"openlxp/openlxp-xds-ui:latest",
+      "name":"xms-ui",
+      "image":"openlxp/openlxp-xms-ui:latest",
       "cpu":2,
       "memory":512,
       "essential":true,
@@ -14,11 +14,11 @@
       ],
       "environmentVariables":[
          {
-           "REACT_APP_CONFIGURATION_API"=http://54.160.23.156:8100/api/ui-configuration/,
-           "REACT_APP_ES_API"=http://54.160.23.156:8100/es-api/,
-           "REACT_APP_ES_MLT_API"=http://54.160.23.156:8100/es-api/more-like-this/,
-           "REACT_APP_BACKEND_HOST"=http://54.160.23.156:8100,
-           "REACT_APP_SPOTLIGHT_COURSES"=http://54.160.23.156:8100/api/spotlight-courses
+           "REACT_APP_CONFIGURATION_API":http://54.160.23.156:8100/api/ui-configuration/,
+           "REACT_APP_ES_API":http://54.160.23.156:8100/es-api/,
+           "REACT_APP_ES_MLT_API":http://54.160.23.156:8100/es-api/more-like-this/,
+           "REACT_APP_BACKEND_HOST":http://54.160.23.156:8100,
+           "REACT_APP_SPOTLIGHT_COURSES":http://54.160.23.156:8100/api/spotlight-courses
          }
       ],
       "entryPoint":[
@@ -30,8 +30,8 @@
       ]
    },
    {
-      "name":"xds",
-      "image":"openlxp/openlxp-xds:latest",
+      "name":"xms",
+      "image":"openlxp/openlxp-xms:latest",
       "cpu":2,
       "memory":512,
       "essential":true,
@@ -44,11 +44,11 @@
       ],
       "environmentVariables":[
          {
-           "REACT_APP_CONFIGURATION_API"=http://54.160.23.156:8100/api/ui-configuration/,
-           "REACT_APP_ES_API"=http://54.160.23.156:8100/es-api/,
-           "REACT_APP_ES_MLT_API"=http://54.160.23.156:8100/es-api/more-like-this/,
-           "REACT_APP_BACKEND_HOST"=http://54.160.23.156:8100,
-           "REACT_APP_SPOTLIGHT_COURSES"=http://54.160.23.156:8100/api/spotlight-courses
+           "REACT_APP_CONFIGURATION_API":"arn:aws:ssm:us-east-1:aws account:parameter/REACT_APP_CONFIGURATION_API",
+           "REACT_APP_ES_API":"arn:aws:ssm:us-east-1:aws account:parameter/REACT_APP_ES_API",
+           "REACT_APP_ES_MLT_API":"arn:aws:ssm:us-east-1:aws account:parameter/REACT_APP_ES_MLT_API",
+           "REACT_APP_BACKEND_HOST":"arn:aws:ssm:us-east-1:aws account:parameter/REACT_APP_BACKEND_HOST",
+           "REACT_APP_SPOTLIGHT_COURSES":"arn:aws:ssm:us-east-1:aws account:parameter/REACT_APP_SPOTLIGHT_COURSES"
          }
       ],
       "entryPoint":[
