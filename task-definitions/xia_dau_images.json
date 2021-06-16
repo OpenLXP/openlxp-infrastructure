@@ -22,9 +22,7 @@
            "DATA_FILE_NAME": "arn:aws:ssm:us-east-1:var.aws_account:parameter/DATA_FILE_NAME",
            "DJANGO_SUPERUSER_PASSWORD":"arn:aws:ssm:us-east-1:var.aws_account:parameter/DJANGO_SUPERUSER_PASSWORD",
            "DJANGO_SUPERUSER_USERNAME":"arn:aws:ssm:us-east-1:var.aws_account:parameter/DJANGO_SUPERUSER_USERNAME",
-           "SCHEMA_FILE": "arn:aws:ssm:us-east-1:var.aws_account:parameter/SCHEMA_FILE",
            "BUCKET_NAME": "arn:aws:ssm:us-east-1:var.aws_account:parameter/BUCKET_NAME",
-           "UPLOAD_BUCKET_NAME": "arn:aws:ssm:us-east-1:var.aws_account:parameter/UPLOAD_BUCKET_NAME",
            "SECRET_KEY_VAL": "arn:aws:ssm:us-east-1:var.aws_account:parameter/SECRET_KEY_VAL",
            "XIS_API_ENDPOINT": "arn:aws:ssm:us-east-1:var.aws_account:parameter/XIS_API_ENDPOINT",
            "XSR_API_ENDPOINT": "arn:aws:ssm:us-east-1:var.aws_account:parameter/DAU_XSR_API_ENDPOINT"
