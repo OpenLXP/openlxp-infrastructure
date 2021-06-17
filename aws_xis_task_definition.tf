@@ -5,4 +5,6 @@ resource "aws_ecs_task_definition" "xis_task_definition" {
   network_mode          = "awsvpc"
   requires_compatibilities = ["FARGATE"]
   execution_role_arn    = "arn:aws:iam::var.aws_account:role/ecsTaskExecutionRole"
+  cpu                   = "1024"
+  memory                = "2048"
 }
