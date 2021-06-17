@@ -1,5 +1,5 @@
 # Create subnet # 1 in us-east-1
-resource "aws_subnet" "xia_subnet_useast1" {
+resource "aws_subnet" "xia_subnet1_useast1" {
   provider          = aws
   availability_zone = element(data.aws_availability_zones.ecc-azs.names, 0)
   vpc_id            = aws_vpc.ecc_vpc.id
@@ -24,7 +24,7 @@ resource "aws_subnet" "xia_subnet2_useast1" {
 }
 
 # Create subnet # 3  in us-east-1
-resource "aws_subnet" "xia_subnet2_useast1" {
+resource "aws_subnet" "xia_subnet3_useast1" {
   provider          = aws
   vpc_id            = aws_vpc.ecc_vpc.id
   availability_zone = element(data.aws_availability_zones.ecc-azs.names, 2)
@@ -36,7 +36,7 @@ resource "aws_subnet" "xia_subnet2_useast1" {
 }
 
 # Create subnet # 4  in us-east-1
-resource "aws_subnet" "xia_subnet2_useast1" {
+resource "aws_subnet" "xia_subnet4_useast1" {
   provider          = aws
   vpc_id            = aws_vpc.ecc_vpc.id
   availability_zone = element(data.aws_availability_zones.ecc-azs.names, 3)

@@ -13,13 +13,7 @@ resource "aws_ecs_service" "xds_service" {
   depends_on      = [aws_iam_role_policy.ecs_iam_role_policy]
   launch_type     = "FARGATE"
 
-  ordered_placement_strategy {
-    type  = "binpack"
-    field = "cpu"
-  }
-
-  placement_constraints {
-    type       = "memberOf"
-    expression = "attribute:ecs.availability-zone in [us-east-1a, us-east-1b]"
+  network_configuration {
+    subnets = [aws_subnet.xds_subnet2_useast1.id]
   }
 }
