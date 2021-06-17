@@ -14,3 +14,4 @@ aws_xss_sg.tf
 aws_xds_parameter_store.tf
 aws_xis_parameter_store.tf
 aws_xms_parameter_store.tf
+aws_parameter_store.tf
