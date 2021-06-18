@@ -26,8 +26,8 @@ resource "aws_subnet" "xia_subnet2_useast1" {
 # Create subnet # 3  in us-east-1
 resource "aws_subnet" "xia_subnet3_useast1" {
   provider          = aws
-  vpc_id            = aws_vpc.ecc_vpc.id
-  availability_zone = element(data.aws_availability_zones.ecc-azs.names, 2)
+  vpc_id            = aws_vpc.openlxp_vpc.id
+  availability_zone = element(data.aws_availability_zones.openlxp-azs.names, 2)
   cidr_block        = "10.0.4.0/24"
 
   tags = {
@@ -38,8 +38,8 @@ resource "aws_subnet" "xia_subnet3_useast1" {
 # Create subnet # 4  in us-east-1
 resource "aws_subnet" "xia_subnet4_useast1" {
   provider          = aws
-  vpc_id            = aws_vpc.ecc_vpc.id
-  availability_zone = element(data.aws_availability_zones.ecc-azs.names, 3)
+  vpc_id            = aws_vpc.openlxp_vpc.id
+  availability_zone = element(data.aws_availability_zones.openlxp-azs.names, 3)
   cidr_block        = "10.0.4.0/24"
 
   tags = {

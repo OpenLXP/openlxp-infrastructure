@@ -1,9 +1,9 @@
-resource "aws_s3_bucket" "eccschema" {
-  bucket = "eccschema"
+resource "aws_s3_bucket" "openlxpschema" {
+  bucket = "openlxpschema"
   acl    = "public-read"
 
   tags = {
-    Name        = "eccschema"
+    Name        = "openlxpschema"
     Environment = "test"
   }
 }

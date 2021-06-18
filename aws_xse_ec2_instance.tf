@@ -1,12 +1,12 @@
 resource "aws_instance" "ecc_elasticsearch" {
-  key_name      = aws_key_pair.ecc_elastic_kp.key_name
+  key_name      = aws_key_pair.openlxp_elastic_kp.key_name
   ami           = "ami-0747bdcabd34c712a"
   instance_type = "t2.medium"
   associate_public_ip_address = true
   subnet_id = aws_subnet.xse_subnet1_useast1.id
 
   tags = {
-    Name = "ecc-elasticsearch"
+    Name = "openlxp-elasticsearch"
   }
 
   vpc_security_group_ids = [
@@ -26,8 +26,8 @@ resource "aws_instance" "ecc_elasticsearch" {
   }
 }
 
-resource "aws_key_pair" "ecc_elastic_kp" {
-  key_name = "ecc_elastic_kp"
+resource "aws_key_pair" "openlxp_elastic_kp" {
+  key_name = "openlxp_elastic_kp"
   public_key = file("key.pub")
   }
 
@@ -40,11 +40,11 @@ resource "aws_network_interface" "xse_network_interface" {
 }
 
 resource "aws_eip" "xse_eip" {
-  instance = aws_instance.ecc_elasticsearch.id
+  instance = aws_instance.openlxp_elasticsearch.id
   vpc      = true
 }
 
 resource "aws_eip_association" "eip_assoc" {
-  instance_id   = aws_instance.ecc_elasticsearch.id
+  instance_id   = aws_instance.openlxp_elasticsearch.id
   allocation_id = aws_eip.xse_eip.id
 }

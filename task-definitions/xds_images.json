@@ -54,8 +54,6 @@
            "DJANGO_SUPERUSER_PASSWORD":"arn:aws:ssm:us-east-1:var.aws_account:parameter/DJANGO_SUPERUSER_PASSWORD",
            "DJANGO_SUPERUSER_EMAIL":"arn:aws:ssm:us-east-1:var.aws_account:parameter/DJANGO_SUPERUSER_EMAIL",
            "BUCKET_NAME":"arn:aws:ssm:us-east-1:var.aws_account:parameter/BUCKET_NAME",
-           "AWS_ACCESS_KEY_ID"=
-           "AWS_SECRET_ACCESS_KEY"=
            "AWS_DEFAULT_REGION":"arn:aws:ssm:us-east-1:var.aws_account:parameter/AWS_DEFAULT_REGION",
            "SECRET_KEY_VAL":"arn:aws:ssm:us-east-1:var.aws_account:parameter/SECRET_KEY_VAL",
            "ES_HOST":"arn:aws:ssm:us-east-1:var.aws_account:parameter/ES_HOST",

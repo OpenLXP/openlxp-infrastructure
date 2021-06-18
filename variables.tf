@@ -25,5 +25,5 @@ variable "fargate_memory" {
 
 variable "aws_account" {
   description = "aws account in which resources are being deployed"
-  default     = ""
+  default     = "UNDEFINED_AWS_ACCOUNT"
 }

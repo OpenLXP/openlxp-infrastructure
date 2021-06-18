@@ -2,14 +2,14 @@
 resource "aws_security_group" "ecs_xis_sg" {
   name        = "ecs_xis_sg"
   description = "Allow TLS inbound traffic on ports 8000,8010,8020,80,443"
-  vpc_id      = aws_vpc.ecc_vpc.id
+  vpc_id      = aws_vpc.openlxp_vpc.id
 
   ingress {
     description = "TLS from VPC"
     from_port   = 8000
     to_port     = 8000
     protocol    = "tcp"
-    cidr_blocks = [aws_vpc.ecc_vpc.cidr_block]
+    cidr_blocks = [aws_vpc.openlxp_vpc.cidr_block]
   }
 
   ingress {
@@ -20,14 +20,6 @@ resource "aws_security_group" "ecs_xis_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  ingress {
-    description = "TLS from VPC"
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
   egress {
     from_port   = 0
     to_port     = 0
@@ -36,7 +28,7 @@ resource "aws_security_group" "ecs_xis_sg" {
   }
 
   tags = {
-    Name = "ecc_xis_sg"
+    Name = "ecs_xis_sg"
   }
 }
 
@@ -44,14 +36,14 @@ resource "aws_security_group" "ecs_xis_sg" {
 resource "aws_security_group" "ecs_xis_mysql_sg" {
   name        = "ecs_xis_mysql_sg"
   description = "Allow MySQL connectivity"
-  vpc_id      = aws_vpc.ecc_vpc.id
+  vpc_id      = aws_vpc.openlxp_vpc.id
 
   ingress {
     description = "TLS from VPC"
     from_port   = 3306
     to_port     = 3306
     protocol    = "tcp"
-    cidr_blocks = [aws_vpc.ecc_vpc.cidr_block]
+    cidr_blocks = [aws_vpc.openlxp_vpc.cidr_block]
   }
 
   egress {
@@ -62,6 +54,6 @@ resource "aws_security_group" "ecs_xis_mysql_sg" {
   }
 
   tags = {
-    Name = "ecc_xis_db_sg"
+    Name = "ecs_xis_db_sg"
   }
 }

@@ -1,15 +1,15 @@
 # security group to allow inbound connection on port 8000 from VPC cidr. 443&80 from anywhere
-resource "aws_security_group" "ecc_ssh_sg" {
-  name        = "ecc_ssh_sg"
+resource "aws_security_group" "openlxp_ssh_sg" {
+  name        = "openlxp_ssh_sg"
   description = "Allow TLS inbound traffic on ports 8000,8010,8020,80,443"
-  vpc_id      = aws_vpc.ecc_vpc.id
+  vpc_id      = aws_vpc.openlxp_vpc.id
 
   ingress {
     description = "TLS from VPC"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = [aws_vpc.ecc_vpc.cidr_block]
+    cidr_blocks = [aws_vpc.openlxp_vpc.cidr_block]
   }
 
   ingress {
@@ -17,7 +17,7 @@ resource "aws_security_group" "ecc_ssh_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = [aws_vpc.ecc_vpc.cidr_block]
+    cidr_blocks = [aws_vpc.openlxp_vpc.cidr_block]
   }
 
   ingress {
@@ -44,6 +44,6 @@ resource "aws_security_group" "ecc_ssh_sg" {
   }
 
   tags = {
-    Name = "ecc_ssh_sg"
+    Name = "openlxp_ssh_sg"
   }
 }
