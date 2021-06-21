@@ -46,11 +46,11 @@
       ],
       "environmentVariables":[
          {
-           "REACT_APP_CONFIGURATION_API":"arn:aws:ssm:us-east-1:aws account:parameter/REACT_APP_CONFIGURATION_API",
-           "REACT_APP_ES_API":"arn:aws:ssm:us-east-1:aws account:parameter/REACT_APP_ES_API",
-           "REACT_APP_ES_MLT_API":"arn:aws:ssm:us-east-1:aws account:parameter/REACT_APP_ES_MLT_API",
-           "REACT_APP_BACKEND_HOST":"arn:aws:ssm:us-east-1:aws account:parameter/REACT_APP_BACKEND_HOST",
-           "REACT_APP_SPOTLIGHT_COURSES":"arn:aws:ssm:us-east-1:aws account:parameter/REACT_APP_SPOTLIGHT_COURSES"
+           "REACT_APP_CONFIGURATION_API":"arn:aws:ssm:us-east-1:var.aws_account:parameter/REACT_APP_CONFIGURATION_API",
+           "REACT_APP_ES_API":"arn:aws:ssm:us-east-1:var.aws_account:parameter/REACT_APP_ES_API",
+           "REACT_APP_ES_MLT_API":"arn:aws:ssm:us-east-1:var.aws_account:parameter/REACT_APP_ES_MLT_API",
+           "REACT_APP_BACKEND_HOST":"arn:aws:ssm:us-east-1:var.aws_account:parameter/REACT_APP_BACKEND_HOST",
+           "REACT_APP_SPOTLIGHT_COURSES":"arn:aws:ssm:us-east-1:var.aws_account:parameter/REACT_APP_SPOTLIGHT_COURSES"
          }
       ],
       "entryPoint":[
@@ -77,10 +77,10 @@
       ],
       "environmentVariables":[
          {
-            "MYSQL_DATABASE":"arn:aws:ssm:us-east-1:aws account:parameter/MYSQL_DATABASE",
-            "MYSQL_PASSWORD":"arn:aws:ssm:us-east-1:aws account:parameter/MYSQL_PASSWORD",
-            "MYSQL_ROOT_PASSWORD":"arn:aws:ssm:us-east-1:aws account:parameter/MYSQL_ROOT_PASSWORD",
-            "MYSQL_USER":"arn:aws:ssm:us-east-1:aws account:parameter/MYSQL_USER"
+            "MYSQL_DATABASE":"arn:aws:ssm:us-east-1:var.aws_account:parameter/MYSQL_DATABASE",
+            "MYSQL_PASSWORD":"arn:aws:ssm:us-east-1:var.aws_account:parameter/MYSQL_PASSWORD",
+            "MYSQL_ROOT_PASSWORD":"arn:aws:ssm:us-east-1:var.aws_account:parameter/MYSQL_ROOT_PASSWORD",
+            "MYSQL_USER":"arn:aws:ssm:us-east-1:var.aws_account:parameter/MYSQL_USER"
          }
       ]
    }

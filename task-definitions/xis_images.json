@@ -15,18 +15,18 @@
       ],
       "environmentVariables":[
          {
-            "DB_NAME":"arn:aws:ssm:us-east-1:aws account:parameter/XIS_DB_NAME",
-            "DB_PASSWORD":"arn:aws:ssm:us-east-1:aws account:parameter/MYSQL_PASSWORD",
-            "DB_USER":"arn:aws:ssm:us-east-1:aws account:parameter/MYSQL_USER",
-            "DJANGO_SUPERUSER_PASSWORD":"arn:aws:ssm:us-east-1:aws account:parameter/DJANGO_SUPERUSER_PASSWORD",
-            "DJANGO_SUPERUSER_USERNAME":"arn:aws:ssm:us-east-1:aws account:parameter/DJANGO_SUPERUSER_USERNAME",
-            "DJANGO_SUPERUSER_EMAIL": "arn:aws:ssm:us-east-1:aws account:parameter/DJANGO_SUPERUSER_EMAIL",
-            "DB_HOST": "arn:aws:ssm:us-east-1:aws account:parameter/XIS_DB_HOST",
-            "BUCKET_NAME": "arn:aws:ssm:us-east-1:aws account:parameter/BUCKET_NAME",
-            "SECRET_KEY_VAL": "arn:aws:ssm:us-east-1:aws account:parameter/SECRET_KEY_VAL",
-            "XIS_API_ENDPOINT": "arn:aws:ssm:us-east-1:aws account:parameter/XIS_API_ENDPOINT",
-            "ES_ENDPOINT": "arn:aws:ssm:us-east-1:aws account:parameter/ES_ENDPOINT",
-            "ES_INDEX": "arn:aws:ssm:us-east-1:aws account:parameter/ES_INDEX"
+            "DB_NAME":"arn:aws:ssm:us-east-1:var.aws_account:parameter/XIS_DB_NAME",
+            "DB_PASSWORD":"arn:aws:ssm:us-east-1:var.aws_account:parameter/MYSQL_PASSWORD",
+            "DB_USER":"arn:aws:ssm:us-east-1:var.aws_account:parameter/MYSQL_USER",
+            "DJANGO_SUPERUSER_PASSWORD":"arn:aws:ssm:us-east-1:var.aws_account:parameter/DJANGO_SUPERUSER_PASSWORD",
+            "DJANGO_SUPERUSER_USERNAME":"arn:aws:ssm:us-east-1:var.aws_account:parameter/DJANGO_SUPERUSER_USERNAME",
+            "DJANGO_SUPERUSER_EMAIL": "arn:aws:ssm:us-east-1:var.aws_account:parameter/DJANGO_SUPERUSER_EMAIL",
+            "DB_HOST": "arn:aws:ssm:us-east-1:var.aws_account:parameter/XIS_DB_HOST",
+            "BUCKET_NAME": "arn:aws:ssm:us-east-1:var.aws_account:parameter/BUCKET_NAME",
+            "SECRET_KEY_VAL": "arn:aws:ssm:us-east-1:var.aws_account:parameter/SECRET_KEY_VAL",
+            "XIS_API_ENDPOINT": "arn:aws:ssm:us-east-1:var.aws_account:parameter/XIS_API_ENDPOINT",
+            "ES_ENDPOINT": "arn:aws:ssm:us-east-1:var.aws_account:parameter/ES_ENDPOINT",
+            "ES_INDEX": "arn:aws:ssm:us-east-1:var.aws_account:parameter/ES_INDEX"
          }
       ],
       "entryPoint":[
@@ -53,10 +53,10 @@
       ],
       "environmentVariables":[
          {
-            "MYSQL_DATABASE":"arn:aws:ssm:us-east-1:aws account:parameter/MYSQL_DATABASE",
-            "MYSQL_PASSWORD":"arn:aws:ssm:us-east-1:aws account:parameter/MYSQL_PASSWORD",
-            "MYSQL_ROOT_PASSWORD":"arn:aws:ssm:us-east-1:aws account:parameter/MYSQL_ROOT_PASSWORD",
-            "MYSQL_USER":"arn:aws:ssm:us-east-1:aws account:parameter/MYSQL_USER"
+            "MYSQL_DATABASE":"arn:aws:ssm:us-east-1:var.aws_account:parameter/MYSQL_DATABASE",
+            "MYSQL_PASSWORD":"arn:aws:ssm:us-east-1:var.aws_account:parameter/MYSQL_PASSWORD",
+            "MYSQL_ROOT_PASSWORD":"arn:aws:ssm:us-east-1:var.aws_account:parameter/MYSQL_ROOT_PASSWORD",
+            "MYSQL_USER":"arn:aws:ssm:us-east-1:var.aws_account:parameter/MYSQL_USER"
          }
       ]
    }
