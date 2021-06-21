@@ -2,3 +2,16 @@
 /.terraform*
 .terraform.lock.hcl
 core.2540
+aws_xse_ecs_cluster.tf
+aws_xse_eks_node_group.tf
+aws_xse_task_definition.tf
+aws_xse_eks_cluster.tf
+aws_xss_ecs_cluster.tf
+aws_xss_task_definition.tf
+/task-definitions/xse_images.json
+/task-definitions/xss_images.json
+aws_xss_sg.tf
+aws_xds_parameter_store.tf
+aws_xis_parameter_store.tf
+aws_xms_parameter_store.tf
+aws_parameter_store.tf

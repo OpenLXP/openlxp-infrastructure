@@ -11,13 +11,5 @@ terraform {
 provider "aws" {
   profile = var.profile
   region  = var.region-management
-  alias   = "ecc-management-region"
+  alias   = "openlxp_vpc"
 }
-
-
-#provider "aws" {
-#  profile = var.profile
-#  region  = var.region-production
-#  alias   = "ecc-production-region"
-#}
-

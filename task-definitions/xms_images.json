@@ -1,0 +1,87 @@
+[
+   {
+      "name":"xms-ui",
+      "image":"openlxp/openlxp-xms-ui:latest",
+      "cpu":2,
+      "memory":512,
+      "essential":true,
+      "networkMode":"awsvpc",
+      "portMappings":[
+         {
+            "containerPort":3000,
+            "hostPort":3000,
+            "protocol":"tcp"
+         }
+      ],
+      "environmentVariables":[
+         {
+           "REACT_APP_CONFIGURATION_API":"arn:aws:ssm:us-east-1:var.aws_account:parameter/REACT_APP_CONFIGURATION_API",
+           "REACT_APP_ES_API":"arn:aws:ssm:us-east-1:var.aws_account:parameter/REACT_APP_ES_API",
+           "REACT_APP_ES_MLT_API":"arn:aws:ssm:us-east-1:var.aws_account:parameter/REACT_APP_ES_MLT_API",
+           "REACT_APP_BACKEND_HOST":"arn:aws:ssm:us-east-1:var.aws_account:parameter/REACT_APP_BACKEND_HOST",
+           "REACT_APP_SPOTLIGHT_COURSES":"arn:aws:ssm:us-east-1:var.aws_account:parameter/REACT_APP_SPOTLIGHT_COURSES"
+         }
+      ],
+      "entryPoint":[
+         "sh",
+         "-c"
+      ],
+      "command":[
+         "\"/opt/app/start-app.sh\""
+      ]
+   },
+   {
+      "name":"xms",
+      "image":"openlxp/openlxp-xms:latest",
+      "cpu":2,
+      "memory":512,
+      "essential":true,
+      "networkMode":"awsvpc",
+      "portMappings":[
+         {
+            "containerPort":8100,
+            "hostPort":8100,
+            "protocol":"tcp"
+         }
+      ],
+      "environmentVariables":[
+         {
+           "REACT_APP_CONFIGURATION_API":"arn:aws:ssm:us-east-1:aws account:parameter/REACT_APP_CONFIGURATION_API",
+           "REACT_APP_ES_API":"arn:aws:ssm:us-east-1:aws account:parameter/REACT_APP_ES_API",
+           "REACT_APP_ES_MLT_API":"arn:aws:ssm:us-east-1:aws account:parameter/REACT_APP_ES_MLT_API",
+           "REACT_APP_BACKEND_HOST":"arn:aws:ssm:us-east-1:aws account:parameter/REACT_APP_BACKEND_HOST",
+           "REACT_APP_SPOTLIGHT_COURSES":"arn:aws:ssm:us-east-1:aws account:parameter/REACT_APP_SPOTLIGHT_COURSES"
+         }
+      ],
+      "entryPoint":[
+         "sh",
+         "-c"
+      ],
+      "command":[
+         "\"/opt/app/start-app.sh\""
+      ]
+   },
+   {
+      "name":"xia-db",
+      "image":"mysql:5.7",
+      "cpu":2,
+      "memory":512,
+      "essential":true,
+      "networkMode":"awsvpc",
+      "portMappings":[
+         {
+            "containerPort":3306,
+            "hostPort":3306,
+            "protocol":"tcp"
+         }
+      ],
+      "environmentVariables":[
+         {
+            "MYSQL_DATABASE":"arn:aws:ssm:us-east-1:aws account:parameter/MYSQL_DATABASE",
+            "MYSQL_PASSWORD":"arn:aws:ssm:us-east-1:aws account:parameter/MYSQL_PASSWORD",
+            "MYSQL_ROOT_PASSWORD":"arn:aws:ssm:us-east-1:aws account:parameter/MYSQL_ROOT_PASSWORD",
+            "MYSQL_USER":"arn:aws:ssm:us-east-1:aws account:parameter/MYSQL_USER"
+         }
+      ]
+   }
+]

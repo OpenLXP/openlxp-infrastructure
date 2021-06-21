@@ -1,7 +1,7 @@
 [
    {
-      "name":"xia-dau-app",
-      "image":"openlxp/openlxp-xia-dau:latest",
+      "name":"xia-edx-app",
+      "image":"openlxp/openlxp-xia-edx:latest",
       "cpu":2,
       "memory":512,
       "essential":true,
@@ -18,7 +18,7 @@
            "DB_NAME":"arn:aws:ssm:us-east-1:var.aws_account:parameter/XIA_DB_NAME",
            "DB_PASSWORD":"arn:aws:ssm:us-east-1:var.aws_account:parameter/DB_PASSWORD",
            "DB_ROOT_PASSWORD": "arn:aws:ssm:us-east-1:var.aws_account:parameter/DB_ROOT_PASSWORD",
-           "DB_HOST": "arn:aws:ssm:us-east-1:var.aws_account:parameter/DAU_DB_HOST",
+           "DB_HOST": "arn:aws:ssm:us-east-1:var.aws_account:parameter/EDX_DB_HOST",
            "DB_USER":"arn:aws:ssm:us-east-1:var.aws_account:parameter/DB_USER",
            "DATA_FILE_NAME": "arn:aws:ssm:us-east-1:var.aws_account:parameter/DATA_FILE_NAME",
            "DJANGO_SUPERUSER_PASSWORD":"arn:aws:ssm:us-east-1:var.aws_account:parameter/DJANGO_SUPERUSER_PASSWORD",
@@ -26,7 +26,10 @@
            "BUCKET_NAME": "arn:aws:ssm:us-east-1:var.aws_account:parameter/BUCKET_NAME",
            "SECRET_KEY_VAL": "arn:aws:ssm:us-east-1:var.aws_account:parameter/SECRET_KEY_VAL",
            "XIS_API_ENDPOINT": "arn:aws:ssm:us-east-1:var.aws_account:parameter/XIS_API_ENDPOINT",
-           "XSR_API_ENDPOINT": "arn:aws:ssm:us-east-1:var.aws_account:parameter/DAU_XSR_API_ENDPOINT"
+           "XSR_API_ENDPOINT": "arn:aws:ssm:us-east-1:var.aws_account:parameter/XSR_API_ENDPOINT",
+           "TOKEN_URL": "arn:aws:ssm:us-east-1:var.aws_account:parameter/TOKEN_URL",
+           "EDX_CLIENT_ID": "arn:aws:ssm:us-east-1:var.aws_account:parameter/EDX_CLIENT_ID",
+           "EDX_CLIENT_SECRET": "arn:aws:ssm:us-east-1:var.aws_account:parameter/EDX_CLIENT_SECRET"
          }
       ],
       "entryPoint":[
@@ -38,7 +41,7 @@
       ]
    },
    {
-      "name":"db_xia_dau",
+      "name":"db_xia_edx",
       "image":"mysql:5.7",
       "cpu":2,
       "memory":512,
