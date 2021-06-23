@@ -1,4 +1,4 @@
-resource "aws_instance" "ecc_elasticsearch" {
+resource "aws_instance" "openlxp_elasticsearch" {
   key_name      = aws_key_pair.openlxp_elastic_kp.key_name
   ami           = "ami-0747bdcabd34c712a"
   instance_type = "t2.medium"
